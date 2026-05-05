@@ -395,4 +395,27 @@ nav#menu.menu > ul > li > a {
     margin-top: 0 !important;
     padding-top: 0 !important;
 }
+/* ----------------------------------------------------
+   Supprimer le gros article du haut (Contempo)
+   Bloc parent + .is-first-post
+---------------------------------------------------- */
 
+/* Cacher le conteneur complet du premier article mis en avant */
+.post-body.entry-content .is-first-post {
+    display: none !important;
+}
+
+/* Cacher aussi le conteneur parent si vide */
+.post-body.entry-content:first-of-type {
+    display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+}
+
+/* Remonter la grille des articles */
+.blog-posts.hfeed {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
