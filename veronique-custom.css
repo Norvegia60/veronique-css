@@ -312,3 +312,25 @@ nav#menu.menu > ul > li > a {
     margin-top: 0 !important;
     padding-top: 0 !important;
 }
+/* ----------------------------------------------------
+   Supprimer le "gros article" du haut (Contempo)
+   Bloc Hero / Featured
+---------------------------------------------------- */
+
+.hero-post,
+.hero-featured,
+.hero,
+.post-outer-container:first-child .hero-post,
+.post-outer-container:first-child .hero-featured {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Réinitialiser la zone d'articles pour qu'elle remonte */
+.blog-posts.hfeed {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
