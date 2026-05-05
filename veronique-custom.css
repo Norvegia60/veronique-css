@@ -245,3 +245,35 @@ nav#menu.menu > ul > li > a {
         content: "-";
     }
 }
+/* ----------------------------------------------------
+   Désactiver le grand format du premier article
+   sur la page d'accueil (Contempo)
+---------------------------------------------------- */
+
+/* Neutraliser la mise en avant du premier article */
+.blog-posts .post-outer:first-child {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Forcer le conteneur d'image du premier article
+   à avoir le même format que les autres */
+.blog-posts .post-outer:first-child .post-image-container,
+.blog-posts .post-outer:first-child .snippet-thumbnail,
+.blog-posts .post-outer:first-child .index-post-image,
+.blog-posts .post-outer:first-child .entry-thumbnail {
+    height: 250px !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+}
+
+/* Forcer l'image elle-même */
+.blog-posts .post-outer:first-child img {
+    width: 100% !important;
+    height: 250px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    border-radius: 12px !important;
+}
