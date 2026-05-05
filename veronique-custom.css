@@ -1,0 +1,247 @@
+/* ----------------------------------------------------
+   CSS PERSONNALISÉ DE VÉRONIQUE
+   Blog : veronikeberger.blogspot.com
+   Organisation : Pages • Images • Menu • Responsive
+---------------------------------------------------- */
+
+
+/* ----------------------------------------------------
+   1. MISE EN PAGE DES PAGES (suppression sidebar)
+---------------------------------------------------- */
+
+.type-page .main-inner .columns {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.type-page .sidebar-container {
+    display: none !important;
+}
+
+.type-page .main-inner .column-center-inner {
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.type-page .entry-content {
+    width: 95%;
+    margin: 0 auto;
+}
+
+
+/* ----------------------------------------------------
+   2. TABLEAUX DANS LES PAGES
+---------------------------------------------------- */
+
+.type-page table {
+    width: 100% !important;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.type-page table img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* ----------------------------------------------------
+   3. FORMAT DES IMAGES (carré, harmonisé)
+---------------------------------------------------- */
+
+/* Conteneurs des images en page d’accueil */
+.post-image-container,
+.snippet-thumbnail,
+.index-post-image,
+.entry-thumbnail {
+    width: 100% !important;
+    height: 250px !important;
+    overflow: hidden !important;
+    border-radius: 12px;
+    display: block;
+}
+
+/* Images dans ces conteneurs */
+.post-image-container img,
+.snippet-thumbnail img,
+.index-post-image img,
+.entry-thumbnail img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block;
+}
+
+/* Images dans les articles et pages */
+.post-body img,
+.page-body img {
+    width: 100% !important;
+    height: 250px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+/* Premier article en haut de page */
+.blog-posts .post-outer:first-child img,
+.post-outer:nth-of-type(1) img {
+    width: 100% !important;
+    height: 250px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    border-radius: 12px;
+}
+
+
+/* ----------------------------------------------------
+   4. REMPLACEMENT D’UNE IMAGE SPÉCIFIQUE (logo rond)
+---------------------------------------------------- */
+
+#post-body-1973006870986136071 > div:nth-child(1) > a:nth-child(1) > img:nth-child(1) {
+    content: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiewGSDk92Hq7SnicgGJQj8-fPh0zmQhH7610fhsVV9uSk8gzkbkFf2xPMNC7kD9l0DYkv-waBWJom43dfw1lan-UXRbPSNx7V698Xn12ny4B3Vrh-z6Gi0Xj1ZzYwTP0nCaKgW8xD9ybdVlQqSxw8WDZYW3_MI-oYZvoaOM8M6FMahrcBdehZyhdxLxOQ/s320/Copilot_20260504_185238.png");
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+/* ----------------------------------------------------
+   5. MENU PRINCIPAL (mise en forme générale)
+---------------------------------------------------- */
+
+nav#menu.menu a {
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+    color: #000;
+    border: none;
+}
+
+nav#menu.menu a:hover {
+    background: #FFE49F;
+}
+
+.menubtn { display: none; }
+
+nav#menu.menu ul,
+nav#menu.menu ul li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    z-index: 99;
+    background: #FFF;
+}
+
+nav#menu.menu > ul > li > a {
+    text-transform: uppercase;
+}
+
+/* Style du texte des menus */
+.menu ul li.parent a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.menu ul li.parent .sousrubrique li a {
+    font-size: 13px;
+    padding: 8px 10px;
+}
+
+
+/* ----------------------------------------------------
+   6. MENU — VERSION GRAND ÉCRAN (> 501px)
+---------------------------------------------------- */
+
+@media screen and (min-width: 501px) {
+
+    nav#menu.menu .parent { position: relative; }
+    nav#menu.menu > ul > li { display: inline-block; }
+    nav#menu.menu > ul { text-align: center; }
+
+    .sousrubrique {
+        visibility: hidden;
+        position: absolute;
+        top: 100%;
+        min-width: 160px;
+        left: 0;
+        z-index: -1;
+        background: #FFF;
+        opacity: 0;
+        text-align: left;
+        transform: translateY(-2em);
+        transition: all .3s ease-in-out 0s,
+                    visibility 0s linear .3s,
+                    z-index 0s linear 10ms;
+        box-shadow: 3px 3px 5px 0 #656565;
+    }
+
+    nav#menu.menu ul li:hover .sousrubrique {
+        visibility: visible;
+        opacity: 1;
+        z-index: 1;
+        transform: translateY(0);
+        transition-delay: 0s, 0s, .3s;
+    }
+}
+
+
+/* ----------------------------------------------------
+   7. MENU — VERSION MOBILE (< 500px)
+---------------------------------------------------- */
+
+@media screen and (max-width: 500px) {
+
+    a.menubtn {
+        display: inline-block;
+        position: relative;
+        padding: 0.5em 1.9em;
+        text-decoration: none;
+        color: #000;
+        margin-top: 1em;
+        border-radius: 3px;
+        border: 1px solid #CCC;
+        background: #FFE49F;
+    }
+
+    .menubtn:before {
+        content: "";
+        position: absolute;
+        left: 0.5em;
+        top: 0.75em;
+        width: 1em;
+        height: 0.15em;
+        background: black;
+        box-shadow: 0 0.35em 0 0 black,
+                    0 0.7em 0 0 black;
+    }
+
+    nav#menu.menu li a {
+        color: #000;
+        display: block;
+        padding: 0.8em;
+        border-bottom: 1px solid #EEE;
+        position: relative;
+    }
+
+    nav#menu.menu li.sousmenu > a:after {
+        content: '+';
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0.7em 0.5em;
+    }
+
+    nav#menu.menu li.sousmenu > a.select:after {
+        content: "-";
+    }
+}
