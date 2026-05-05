@@ -334,3 +334,27 @@ nav#menu.menu > ul > li > a {
     margin-top: 0 !important;
     padding-top: 0 !important;
 }
+/* ----------------------------------------------------
+   Supprimer le grand article du haut (Contempo)
+   Bloc big-post
+---------------------------------------------------- */
+
+.big-post,
+.big-post .post-outer,
+.big-post .post,
+.big-post .post-body,
+.big-post .post-image,
+.big-post .post-image-container {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Remonter la grille des articles */
+.blog-posts.hfeed {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
