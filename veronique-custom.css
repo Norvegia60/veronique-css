@@ -296,3 +296,19 @@ nav#menu.menu > ul > li > a {
     margin: 0 !important;
     padding: 0 10px 20px 10px !important;
 }
+/* ----------------------------------------------------
+   Supprimer l'affichage spécial du premier article
+   dans le thème Contempo (featured post)
+---------------------------------------------------- */
+
+/* Cacher complètement le bloc "featured post" */
+.featured-post {
+    display: none !important;
+}
+
+/* Réinitialiser la liste des articles pour qu'elle
+   commence directement par le premier article normal */
+.blog-posts.hfeed {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
