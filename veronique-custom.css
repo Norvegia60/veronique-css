@@ -357,4 +357,24 @@ nav#menu.menu > ul > li > a {
     margin-top: 0 !important;
     padding-top: 0 !important;
 }
+/* ----------------------------------------------------
+   Supprimer le gros article du haut (Contempo)
+   Bloc .is-first-post
+---------------------------------------------------- */
+
+.is-first-post {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+}
+
+/* Remonter la grille des articles */
+.blog-posts.hfeed {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
 
